@@ -45,14 +45,6 @@
         h2 {
             color: #003366;
         }
-        .profile-pic {
-            display: block;
-            margin: 20px auto;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
         .publication {
             display: flex;
             align-items: flex-start;
@@ -65,28 +57,34 @@
             object-fit: cover;
         }
         .about-section {
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-    .profile-pic {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 10px; /* Rounded square */
-        flex-shrink: 0;
-    }
-    .about-text {
-        flex: 1;
-        min-width: 250px;
-    }
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px; /* Rounded square */
+            flex-shrink: 0;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 250px;
+        }
+        .highlight {
+            display: block;
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #555;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Jinendra Malekar</h1>
-        <p>PhD Student, ICAS Lab, University of South Carolina</p>
+        <p>PhD Student in Computer Engineering, ICAS Lab &amp; AI Institute, University of South Carolina</p>
     </header>
 
     <nav>
@@ -103,50 +101,75 @@
             <div class="about-section">
                 <img src="./jinu.jpg" alt="Profile Picture" class="profile-pic">
                 <div class="about-text">
-                    <p>I am a PhD student at the University of South Carolina, working in the <strong>ICAS Lab</strong> under the supervision of Prof. Ramtin Zand. My research focuses on optimizing Large Language Models (LLMs) for deployment on resource-constrained edge devices, with an emphasis on quantization, hardware acceleration, and efficient AI systems.</p>
+                    <p>
+                        I am a PhD student in Computer Engineering at the University of South Carolina, working in the
+                        <strong>ICAS Lab</strong> with <strong>Prof. Ramtin Zand</strong>. My research focuses on making
+                        Large Language Models (LLMs) efficient and deployable on resource-constrained hardware.
+                    </p>
+                    <p>
+                        I work at the intersection of <strong>quantization</strong>, <strong>processing-in-memory (PIM)</strong>, 
+                        and <strong>heterogeneous hardware</strong> (edge TPUs, GPUs, and custom accelerators) to enable
+                        real-time, on-device LLMs. I also collaborate on applied AI systems in
+                        <strong>mental health</strong> (WellDunn, CPR), <strong>healthcare</strong> (MDiabates), and 
+                        <strong>disaster response</strong> (social media–driven dashboards).
+                    </p>
                 </div>
             </div>
         </section>
         
-
         <section id="publications">
-            <h2>Publications</h2>
+            <h2>Selected Publications</h2>
+
             <div class="publication">
-                <img src="./llmpi.png" alt="Paper Thumbnail">
+                <img src="./matmul.png" alt="Amdahl’s Law for LLMs Thumbnail">
+                <div>
+                    <strong>
+                        <a href="https://openreview.net/forum?id=JtrQJJQYpP" target="_blank">
+                            Amdahl’s Law for LLMs: A Throughput-Centric Analysis of Extreme LLM Quantization
+                        </a>
+                    </strong><br>
+                    J. Malekar, R. Zand<br>
+                    <em>Transactions on Machine Learning Research (TMLR), 2025</em><br>
+                    <span class="highlight">
+                        Hardware-aware framework to predict realistic throughput gains from 1–2 bit LLM quantization
+                        across projection and attention components on heterogeneous hardware.
+                    </span>
+                </div>
+            </div>
+
+            <div class="publication">
+                <img src="./llmpi.png" alt="LLMPi Thumbnail">
                 <div>
                     <strong>
                         <a href="https://arxiv.org/abs/2504.02118" target="_blank">
                             LLMPi: Optimizing LLMs for High-Throughput on Raspberry Pi
                         </a>
                     </strong><br>
-                    M. Ardakani, J. Malekar, R. Zand <br>
-                    <em>Presented at the 2nd Workshop on Efficient and On-Device Generation (EDGE), CVPR 2025, Nashville, Tennessee</em><br>
-                    Proceedings of the Computer Vision and Pattern Recognition Conference
+                    M. Ardakani, J. Malekar, R. Zand<br>
+                    <em>2nd Workshop on Efficient and On-Device Generation (EDGE), CVPR Workshops 2025, Nashville, Tennessee</em><br>
+                    <span class="highlight">
+                        Demonstrates real-time conversational LLMs on Raspberry Pi using post-training and quantization-aware training (QAT) techniques.
+                    </span>
                 </div>
             </div>
             
             <div class="publication">
-                <img src="./pim.png" alt="Paper Thumbnail">
+                <img src="./pim.png" alt="PIM-LLM Thumbnail">
                 <div>
                     <strong>
                         <a href="https://arxiv.org/abs/2504.01994" target="_blank">
-                            PIM-LLM: A High-Throughput Hybrid PIM Architecture for 1-bit LLMs
+                            Accelerating 1-Bit LLMs via In-Memory Computing Architectures
                         </a>
                     </strong><br>
-                    J. Malekar, P. Chandarana, M.H. Amin, M.E. Elbtity, R. Zand <br>
-                    arXiv preprint arXiv:2504.01994, 2025
-                </div>
-            </div>
-            <div class="publication">
-                <img src="./matmul.png" alt="Paper Thumbnail">
-                <div>
-                    <strong>
-                        <a href="https://arxiv.org/abs/2408.11939" target="_blank">
-                            Matmul or No Matmul in the Era of 1-bit LLMs
-                        </a>
-                    </strong><br>
-                    J. Malekar, M.E. Elbtity, R. Zand <br>
-                    arXiv preprint arXiv:2408.11939, 2024
+                    J. Malekar, P. Chandarana, M. H. Amin, M. E. Elbtity, R. Zand<br>
+                    <em>Midwest Symposium on Circuits and Systems (MWCAS) Main Proceedings, 2025</em><br>
+                    <span class="highlight">
+                        Proposes a hybrid PIM-based accelerator for 1-bit and ternary LLMs, significantly boosting throughput and energy efficiency.
+                    </span>
+                    <span class="highlight">
+                        🏆 1st Place, University Demo &mdash; Design Automation Conference (DAC) 2025 (PIM-LLM prototype)<br>
+                        🏆 NSF Travel Grant Awardee &mdash; MWCAS 2025
+                    </span>
                 </div>
             </div>
         </section>
@@ -154,17 +177,43 @@
         <section id="projects">
             <h2>Projects</h2>
             <ul>
-                <li>Developing highly quantized LLMs for Raspberry Pi and edge devices</li>
-                <li>Designing hybrid analog/digital accelerators for ultra-low-power AI inference</li>
-                <li>Research on 1-bit LLM architectures and their performance trade-offs</li>
+                <li>
+                    <strong>Amdahl’s Law for LLMs</strong> &mdash; Throughput-centric analysis of extreme (1–2 bit) LLM quantization,
+                    separating projection and attention components to guide efficient accelerator and algorithm design.
+                </li>
+                <li>
+                    <strong>LLMPi</strong> &mdash; End-to-end pipeline for running quantized LLMs on Raspberry Pi, achieving 
+                    interactive chat speeds under tight memory and power constraints.
+                </li>
+                <li>
+                    <strong>PIM-LLM</strong> &mdash; Hybrid analog–digital processing-in-memory architecture that accelerates the MatMul-heavy
+                    projection layers in 1-bit LLMs, reducing data movement and improving throughput.
+                </li>
+                <li>
+                    <strong>CPR: Real-Time Suicidality Monitoring on Reddit</strong> &mdash; Web-based system that monitors and annotates
+                    high-risk posts, using language models to provide clinician-friendly explanations.
+                </li>
+                <li>
+                    <strong>WellDunn Mental Health Benchmark</strong> &mdash; Dataset and evaluation framework revealing limitations of LLMs
+                    in clinical mental health settings.
+                </li>
+                <li>
+                    <strong>MDiabates</strong> &mdash; Mobile app for Prisma Health to support type-1 diabetic patients by tracking carbohydrate intake
+                    and assisting with insulin management.
+                </li>
+                <li>
+                    <strong>Disaster Response Dashboard</strong> &mdash; Real-time analysis of Twitter data to surface needs for shelter, food,
+                    and medical support during disasters via an interactive dashboard.
+                </li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: jmalekar@email.sc.edu</p>
+            <p>Email: <a href="mailto:jmalekar@email.sc.edu">jmalekar@email.sc.edu</a></p>
             <p>GitHub: <a href="https://github.com/JINU98" target="_blank">github.com/JINU98</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/jinendramalekar/" target="_blank">https://www.linkedin.com/in/jinendramalekar/</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jinendramalekar/" target="_blank">linkedin.com/in/jinendramalekar</a></p>
+            <p>Google Scholar: <a href="https://scholar.google.com/citations?user=4vzLrzUAAAAJ&amp;hl=en&amp;authuser=1" target="_blank">Google Scholar Profile</a></p>
         </section>
     </div>
 
